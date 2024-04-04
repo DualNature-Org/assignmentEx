@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Fade } from "react-awesome-reveal";
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 function Login() {
@@ -24,7 +26,7 @@ function Login() {
                         <label className='text-lg  font-normal'>Password</label>
                         <input type="password" name='password' placeholder='Enter you password' onChange={(e) => setdata({ ...data, password: e.target.value })} className=' p-2 m-2 border bg-slate-100 border-black' />
                         <button className='bg-blue-500 text-lg w-[6rem]  h-[3rem] p-1 font-bold text-white rounded-2xl mt-8 hover:bg-blue-400' type='submit'>Sign In</button>
-                        <div className='mt-4 font-medium '>Did'nt have an account? <span className='text-blue-400'><a href="/signup">Sign Up</a></span></div>
+                        <div className='mt-4 font-medium '>Didn't have an account? <span className='text-blue-400'><Link to="/signup">Sign Up</Link></span></div>
                     </form>
                 </Fade> 
             </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Fade } from "react-awesome-reveal";
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function Signup() {
   const [data,setdata]=useState({
     fullname:'',
@@ -25,7 +26,7 @@ function Signup() {
           <label className='text-lg  font-normal'>Password</label>
           <input type="password" name='password' placeholder='Enter you password' onChange={(e)=>{setdata({...data,password:e.target.value})}} className=' p-2 m-2 bg-slate-100 border border-black ' />
           <button type='submit' className='bg-blue-500 text-lg w-[6rem]  h-[3rem] p-1 font-bold text-white rounded-2xl mt-10 hover:bg-blue-400'   >Sign Up</button>
-          <div className='mt-8 font-medium '>Already have an account? <span className='text-blue-400'><a href="/login">Sign In</a></span></div>
+          <div className='mt-8 font-medium '>Already have an account? <span className='text-blue-400'><Link to="/login">Sign In</Link></span></div>
         </form>
       </Fade>
     </div>

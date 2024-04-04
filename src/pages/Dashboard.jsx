@@ -12,7 +12,9 @@ function Dashboard() {
         <div>
           <h1 className='text-xl mb-2 font-semibold md:text-2xl lg:text-3xl'>Your ID: {id}</h1>
           <button className='text-lg flex justify-center items-center p-3 bg-slate-200 border rounded-md border-black font-semibold md:text-xl lg:text-xl'>
+            <Link to='/dashboard/accountedit'>
             <FaUserEdit className='mr-2' />Edit Account Details
+            </Link>
           </button>
         </div>
         <div className='flex flex-col mt-4 gap-10 md:flex-row items-center md:items-start justify-center flex-wrap md:flex-nowrap'>
@@ -30,13 +32,13 @@ function Dashboard() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className=" mx-1">
                       <circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
                     </svg>
-                    anmolgaur87@gmail.com
+                    Lorem,ipsum.@gmail.com
                   </div>
                   <div className='flex items-center gap-2 mb-2 text-black'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
-                    +91-6230028359
+                    +91-6115551212
                   </div>
                 </div>
                 <div className="flex flex-col items-start justify-center gap-3 cursor-pointer">

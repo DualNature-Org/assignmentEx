@@ -9,6 +9,7 @@ import Footer from "../src/Components/Footer";
 import PostReq from "./pages/PostReq";
 import Worksubmit from "./pages/Worksubmit";
 import Sample from "./pages/Sample";
+import Editaccount from "./pages/Editaccount";
 
 
 function App() {
@@ -23,11 +24,12 @@ function App() {
       <Route path="/login" element={<Login/>} />
       <Route path="/signup" element={<Signup/>} />
       <Route path="/dashboard" element={<Dashboard/>} />
+      <Route path="/dashboard/accountedit" element={<Editaccount/>}/>
       <Route path="/sample" element={<Sample/>} />
       <Route path="/postreq" element={<PostReq/>} />
-      <Route path="/postreq/academic" element={<Worksubmit type="Academic Writiing"/>} />
+      <Route path="/postreq/academic" element={<Worksubmit type="Academic Writing"/>} />
       <Route path="/postreq/coding" element={<Worksubmit type="Coding"/>} />
-      <Route path="/postreq/professional" element={<Worksubmit type="Professional Writiing"/>} />
+      <Route path="/postreq/professional" element={<Worksubmit type="Professional Writing"/>} />
     </Routes>
     <Footer/>
     </BrowserRouter>

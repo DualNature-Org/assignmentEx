@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Worksubmit(props) {
+    console.log(props.type);
     const [files, setFiles] = useState([]);
 
     const handleDrop = (event) => {
@@ -17,6 +19,7 @@ function Worksubmit(props) {
     const handleClear = () => {
         setFiles([]);
     };
+    const navigate = useNavigate()
 
     return (
         <div>
@@ -36,47 +39,35 @@ function Worksubmit(props) {
                         {
                             props.type === "Academic Writing" && <fieldset class="flex flex-wrap items-center justify-center w-full gap-3 py-8">
                                 <div>
-                                    <input type="checkbox" name="ResearchProposal" id="ResearchProposal" class="peer hidden" value="Research Proposal" />
                                     <label for="ResearchProposal" class="flex items-center justify-center gap-2 px-3 py-2 text-gray-900 border border-gray-100 rounded-md cursor-pointer hover:border-gray-200 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                        </svg>
+                                        <input type="checkbox" name="ResearchProposal" id="ResearchProposal" value="Research Proposal" className="p-4 " />
                                         <p class="text-sm font-medium">Research Proposal</p>
                                     </label>
+
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="ThesisEditing" id="ThesisEditing" class="peer hidden" value="Thesis Editing" />
                                     <label for="ThesisEditing" class="flex items-center justify-center gap-2 px-3 py-2 text-gray-900 border border-gray-100 rounded-md cursor-pointer hover:border-gray-200 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                        </svg>
+                                        <input type="checkbox" name="ThesisEditing" id="ThesisEditing" value="Thesis Editing" className="p-4 " />
                                         <p class="text-sm font-medium">Thesis Editing</p>
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="PaperProofreading" id="PaperProofreading" class="peer hidden" value="Academic Paper Proofreading" />
                                     <label for="PaperProofreading" class="flex items-center justify-center gap-2 px-3 py-2 text-gray-900 border border-gray-100 rounded-md cursor-pointer hover:border-gray-200 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                        </svg>
+                                        <input type="checkbox" name="PaperProofreading" id="PaperProofreading" value="Academic Paper Proofreading" className="p-4 " />
                                         <p class="text-sm font-medium">Academic Paper Proofreading</p>
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="TermPaperWriting" id="TermPaperWriting" class="peer hidden" value="Term Paper Writing" />
                                     <label for="TermPaperWriting" class="flex items-center justify-center gap-2 px-3 py-2 text-gray-900 border border-gray-100 rounded-md cursor-pointer hover:border-gray-200 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                        </svg>
+                                        <input type="checkbox" name="TermPaperWriting" id="TermPaperWriting" value="Term Paper Writing" className="p-4 " />
+
                                         <p class="text-sm font-medium">Term Paper Writing</p>
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="DissertationEditing" id="DissertationEditing" class="peer hidden" value="Dissertation Editing" />
                                     <label for="DissertationEditing" class="flex items-center justify-center gap-2 px-3 py-2 text-gray-900 border border-gray-100 rounded-md cursor-pointer hover:border-gray-200 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                        </svg>
+                                        <input type="checkbox" name="DissertationEditing" id="DissertationEditing" value="Dissertation Editing" className="p-4 " />
+
                                         <p class="text-sm font-medium">Dissertation Editing</p>
                                     </label>
                                 </div>
@@ -84,21 +75,17 @@ function Worksubmit(props) {
                         }
                         {
                             props.type === "Coding" && <fieldset class="flex flex-wrap items-center justify-center w-full gap-3 py-8">
-                                 <div>
-                                    <input type="checkbox" name="TermPaperWriting" id="TermPaperWriting" class="peer hidden" value="Term Paper Writing" />
+                                <div>
                                     <label for="TermPaperWriting" class="flex items-center justify-center gap-2 px-3 py-2 text-gray-900 border border-gray-100 rounded-md cursor-pointer hover:border-gray-200 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                        </svg>
+                                        <input type="checkbox" name="TermPaperWriting" id="TermPaperWriting" value="Term Paper Writing" className="p-4 " />
+
                                         <p class="text-sm font-medium">Software</p>
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="DissertationEditing" id="DissertationEditing" class="peer hidden" value="Dissertation Editing" />
                                     <label for="DissertationEditing" class="flex items-center justify-center gap-2 px-3 py-2 text-gray-900 border border-gray-100 rounded-md cursor-pointer hover:border-gray-200 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                        </svg>
+                                        <input type="checkbox" name="DissertationEditing" id="DissertationEditing" value="Dissertation Editing" className="p-4 " />
+
                                         <p class="text-sm font-medium">Hardware</p>
                                     </label>
                                 </div>
@@ -106,39 +93,30 @@ function Worksubmit(props) {
                         }
                         {
                             props.type === "Professional Writing" && <fieldset class="flex flex-wrap items-center justify-center w-full gap-3 py-8">
-                                 <div>
-                                    <input type="checkbox" name="TermPaperWriting" id="TermPaperWriting" class="peer hidden" value="Term Paper Writing" />
+                                <div>
                                     <label for="TermPaperWriting" class="flex items-center justify-center gap-2 px-3 py-2 text-gray-900 border border-gray-100 rounded-md cursor-pointer hover:border-gray-200 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                        </svg>
+                                        <input type="checkbox" name="TermPaperWriting" id="TermPaperWriting" value="Term Paper Writing" className="p-4 " />
                                         <p class="text-sm font-medium">Resume</p>
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="DissertationEditing" id="DissertationEditing" class="peer hidden" value="Dissertation Editing" />
                                     <label for="DissertationEditing" class="flex items-center justify-center gap-2 px-3 py-2 text-gray-900 border border-gray-100 rounded-md cursor-pointer hover:border-gray-200 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                        </svg>
+                                        <input type="checkbox" name="DissertationEditing" id="DissertationEditing" value="Dissertation Editing" className="p-4 " />
+
                                         <p class="text-sm font-medium">CV</p>
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="TermPaperWriting" id="TermPaperWriting" class="peer hidden" value="Term Paper Writing" />
                                     <label for="TermPaperWriting" class="flex items-center justify-center gap-2 px-3 py-2 text-gray-900 border border-gray-100 rounded-md cursor-pointer hover:border-gray-200 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                        </svg>
+                                        <input type="checkbox" name="TermPaperWriting" id="TermPaperWriting" value="Term Paper Writing" className="p-4 " />
+
                                         <p class="text-sm font-medium">Marketing Quotes</p>
                                     </label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="DissertationEditing" id="DissertationEditing" class="peer hidden" value="Dissertation Editing" />
                                     <label for="DissertationEditing" class="flex items-center justify-center gap-2 px-3 py-2 text-gray-900 border border-gray-100 rounded-md cursor-pointer hover:border-gray-200 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                        </svg>
+                                        <input type="checkbox" name="DissertationEditing" id="DissertationEditing" value="Dissertation Editing" className="p-4" />
+
                                         <p class="text-sm font-medium">Formal letters</p>
                                     </label>
                                 </div>
@@ -215,6 +193,9 @@ function Worksubmit(props) {
                                 <button onClick={handleClear}>Clear</button>
                             </div>
                         )}
+                    </div>
+                    <div className='flex justify-center items-center'>
+                        <button className="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-2 px-4 rounded-md w-[15rem] mt-4" onClick={() => { navigate('/dashboard') }}>  Submit</button>
                     </div>
                 </section>
             </div>
