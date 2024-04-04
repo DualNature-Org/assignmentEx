@@ -28,8 +28,8 @@ function Editaccount() {
             <label htmlFor="confirmpass" className="text-lg mb-2">Confirm Password</label>
             <input type="password" id="confirmpass" className="border border-gray-300 rounded-md py-2 px-3" placeholder="Confirm your new password" />
           </div>
-          <div className="col-span-2">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md w-full" onClick={()=>{navigate('/dashboard')}}>Update</button>
+          <div className="col-span-2 flex justify-center items-center">
+            <button className="bg-blue-500 hover:bg-blue-600  w-[25rem] text-white font-semibold py-2 px-4 rounded-md" onClick={()=>{navigate('/dashboard')}}>Update</button>
           </div>
         </form>
       </div>

@@ -12,9 +12,11 @@ function Navbar() {
       {/* Navbar for larger devices */}
       <nav className='hidden sm:flex justify-between shadow-xl bg-fixed text-black backdrop-blur-xl '>
         <div className='flex justify-center items-center'>
+          <Link to='/'>
           <img src="" alt="" className='w-16 h-16 bg-black mt-3 mb-3 mr-6  ml-3 md:w-18 md:h-18 rounded-full' />
+          </Link>
           <h1 className='text-2xl md:text-2xl font-extrabold text-orange-500 font-mono'>GET AN EXPERT FOR</h1>
-          <h1 className='text-2xl ml-[2rem] md:text-2xl font-extrabold text-blue-500 font-mono transition ease-in-out'>
+          <h1 className='text-2xl ml-[2rem] md:text-2xl font-bold text-blue-500 font-mono transition ease-in-out'>
             <ReactTyped
               strings={[
                 'JAVA/C++', 'FINANCE', 'MANAGEMENT', 'MARKETING', 'DESIGN', 'PROGRAMMING', 'WRITING', 'ENGINEERING', 'LAW', 'IT', 'DATA SCIENCE', 'OTHERS'
@@ -42,11 +44,11 @@ function Navbar() {
 
       {/* Navbar for smaller devices */}
       <nav className='sm:hidden flex justify-between items-center shadow-xl text-black backdrop-blur-xl py-2 px-2'>
-        <a href="/">
+        <Link to="/">
           <div className='flex justify-center items-center mr-3'>
             <img src='' alt="logo" className='w-20 h-20 md:w-32 md:h-32 rounded-full' />
           </div>
-        </a>
+        </Link>
         <div>
           <button onClick={() => setShowLinks(!showLinks)} className="p-4 focus:outline-none hover:text-blue-500">
             {showLinks ? <ImCross className="text-4xl" /> : <SlOptions className="text-4xl" />}
